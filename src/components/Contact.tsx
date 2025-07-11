@@ -1,5 +1,4 @@
-
-import { Mail, Linkedin, Github, ExternalLink, Send, Phone, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, ExternalLink, Send, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
 export const Contact = () => {
@@ -15,16 +14,6 @@ export const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio');
-    const body = encodeURIComponent(
-      `Hi Aryan,\n\n${formData.message}\n\nBest regards,\n${formData.name}\n${formData.email}`
-    );
-    window.location.href = `mailto:aryanjaiswal763@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const contactLinks = [
@@ -77,7 +66,17 @@ export const Contact = () => {
           {/* Contact Form */}
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            <form
+              action="https://formsubmit.co/aryanjaiswal763@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* Optional Hidden Inputs */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://yourdomain.com/thankyou" />
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -110,7 +109,7 @@ export const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                   Subject
@@ -125,7 +124,7 @@ export const Contact = () => {
                   placeholder="Let's discuss opportunities"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message
@@ -141,7 +140,7 @@ export const Contact = () => {
                   placeholder="Hi Aryan, I'd love to connect with you about..."
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
