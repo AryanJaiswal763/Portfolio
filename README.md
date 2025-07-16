@@ -38,12 +38,5 @@ This project is built with:
 - Tailwind CSS
 
 ---
- Connect With Me
-🔗 LinkedIn
 
-🐦 Twitter
-
-🧑‍💻 GitHub
-
-📧 aryanjaiswal763@gmail.com
 
