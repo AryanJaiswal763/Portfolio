@@ -10,13 +10,15 @@ export const Projects = () => {
       name: 'CureAi', 
       type: 'major',
       description: 'AI-powered healthcare solution',
+      github: 'https://github.com/Amuhacks-CureAI/Cure-AI.git',
       icon: '🏥',
       placeholder: true
     },
     { 
-      name: 'Stock Prediction Model', 
+      name: 'StockSage', 
       type: 'major',
       description: 'Machine learning model for stock market prediction',
+      github: 'https://github.com/AryanJaiswal763/StockSage.git'
       icon: '📈',
       placeholder: true
     }
