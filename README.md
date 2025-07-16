@@ -37,4 +37,13 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+---
+ Connect With Me
+🔗 LinkedIn
+
+🐦 Twitter
+
+🧑‍💻 GitHub
+
+📧 aryanjaiswal763@gmail.com
 
